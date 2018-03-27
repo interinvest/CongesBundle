@@ -1,0 +1,24 @@
+{% extends "DefiscBundle::layout_connecte.html.twig" %}
+
+{% block content %}
+    <h1>Saisie d'un utilisateur</h1>
+
+    <section class="white-section clearfix">
+        <form id="saisie_taux" class="formulaire" novalidate="novalidate" method="POST">
+            <div class="row">
+                <div class="col-sm-4">
+                    {{ form_row(form.utilisateur) }}
+                </div>
+                <div class="col-sm-4">
+                    {{ form_row(form.hasRTT) }}
+                </div>
+            </div>
+            {{ form_rest(form) }}
+            <div class="pull-right">
+                <button onclick="$(this).button('loading');" data-loading-text="<i class='fa fa-save marginright-5'> Sauvegarde en cours..." name="enregistrer" id="enregistrer" class="btn btn-primary" type="submit">
+                    <i class="fa fa-save marginright-5"> Sauvegarder</i>
+                </button>
+            </div>
+        </form>
+    </section>
+{% endblock %}

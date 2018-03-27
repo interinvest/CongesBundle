@@ -1,0 +1,16 @@
+# ---- Page de saisie des conventions ---
+conge_saisie_convention:
+    path:     /conge/saisie-convention/{id}
+    defaults: { _controller: CongeBundle:Convention:index, id : null}
+
+# ---- Page de saisie des societés ---
+conge_saisie_societe:
+    path:     /conge/saisie-societe/{id}
+    defaults: { _controller: CongeBundle:Societe:index, id : null}
+
+# ---- Page de saisie des utilisateurs ---
+conge_saisie_utilisateur:
+    path:     /conge/saisie-utilisateur/{id}
+    defaults: { _controller: CongeBundle:Utilisateur:index, id : null}
+
+
