@@ -1,6 +1,6 @@
 <?php
 
-namespace II\Bundle\CongeBundle\Entity;
+namespace InterInvest\CongesBundle\Entity;
 
 interface Salarie
 {

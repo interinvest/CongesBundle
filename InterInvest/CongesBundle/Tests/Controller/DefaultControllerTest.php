@@ -1,6 +1,6 @@
 <?php
 
-namespace II\Bundle\CongeBundle\Tests\Controller;
+namespace InterInvest\CongesBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

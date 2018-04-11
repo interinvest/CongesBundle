@@ -1,6 +1,6 @@
 {
-  "name": "interinvest/congesBundle",
-  "description": "Gestion des congés",
+  "name": "interinvest/congesbundle",
+  "description": "gestion des congés",
   "type": "symfony-bundle",
   "license": "MIT",
   "require": {
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "InterInvest\\CongeBundle\\": ""
+      "InterInvest\\CongesBundle\\": ""
     }
   },
   "require-dev": {
@@ -19,8 +19,3 @@
     "symfony/console": ">=2.8"
   }
 }
-
-
-
-
-

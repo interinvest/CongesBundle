@@ -1,0 +1,3 @@
+conges_homepage:
+    path:     /
+    defaults: { _controller: CongesBundle:Default:index }

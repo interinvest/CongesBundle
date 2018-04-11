@@ -1,6 +1,6 @@
 <?php
 
-namespace II\Bundle\CongeBundle\Entity;
+namespace InterInvest\CongesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * CongeConvention
  *
  * @ORM\Table(name="conge_convention")
- * @ORM\Entity(repositoryClass="II\Bundle\CongeBundle\Entity\CongeConventionRepository")
+ * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\CongeConventionRepository")
  */
 class CongeConvention
 {
@@ -43,23 +43,23 @@ class CongeConvention
     private $nbJoursCongeSupplementaireParAnciennete;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="nb_jours_conge_parental", type="decimal", precision=13, scale=3, nullable=false)
+     * @ORM\Column(name="nb_jours_conge_parental", type="integer", nullable=true)
      */
     private $nbJoursCongeParental;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="nb_jours_deces", type="decimal", precision=13, scale=3, nullable=false)
+     * @ORM\Column(name="nb_jours_deces", type="integer", nullable=true)
      */
     private $nbJoursDeces;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="nb_jours_travailles", type="decimal", precision=13, scale=3, nullable=false)
+     * @ORM\Column(name="nb_jours_travailles", type="integer", nullable=true)
      */
     private $nbJoursTravailles;
 
@@ -153,7 +153,7 @@ class CongeConvention
     /**
      * Set nbJoursCongeParental
      *
-     * @param string $nbJoursCongeParental
+     * @param integer $nbJoursCongeParental
      *
      * @return CongeConvention
      */
@@ -167,7 +167,7 @@ class CongeConvention
     /**
      * Get nbJoursCongeParental
      *
-     * @return string
+     * @return integer
      */
     public function getNbJoursCongeParental()
     {
@@ -177,7 +177,7 @@ class CongeConvention
     /**
      * Set nbJoursDeces
      *
-     * @param string $nbJoursDeces
+     * @param integer $nbJoursDeces
      *
      * @return CongeConvention
      */
@@ -191,7 +191,7 @@ class CongeConvention
     /**
      * Get nbJoursDeces
      *
-     * @return string
+     * @return integer
      */
     public function getNbJoursDeces()
     {
@@ -201,7 +201,7 @@ class CongeConvention
     /**
      * Set nbJoursTravailles
      *
-     * @param string $nbJoursTravailles
+     * @param integer $nbJoursTravailles
      *
      * @return CongeConvention
      */
@@ -215,7 +215,7 @@ class CongeConvention
     /**
      * Get nbJoursTravailles
      *
-     * @return string
+     * @return integer
      */
     public function getNbJoursTravailles()
     {

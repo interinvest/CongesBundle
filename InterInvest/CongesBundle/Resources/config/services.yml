@@ -1,4 +1,4 @@
 services:
-#    conge.example:
-#        class: II\Bundle\CongeBundle\Example
+#    conges.example:
+#        class: InterInvest\CongesBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

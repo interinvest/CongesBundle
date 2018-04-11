@@ -1,15 +1,14 @@
 <?php
 
-namespace II\Bundle\CongeBundle\Entity;
+namespace InterInvest\CongesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use II\Bundle\SecurityBundle\Entity\User;
 
 /**
  * CongeUtilisateur
  *
  * @ORM\Table(name="conge_utilisateur")
- * @ORM\Entity(repositoryClass="II\Bundle\CongeBundle\Entity\CongeUtilisateurRepository")
+ * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\CongeUtilisateurRepository")
  */
 class CongeUtilisateur
 {
@@ -21,16 +20,6 @@ class CongeUtilisateur
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
-    /**
-     * @var User
-     *
-     * @ORM\OneToOne(targetEntity="II\Bundle\SecurityBundle\Entity\User", inversedBy="congeUtilisateur")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="utilisateur", referencedColumnName="id")
-     * })
-     */
-    private $utilisateur;
 
     /**
      * @var integer
@@ -75,29 +64,5 @@ class CongeUtilisateur
     public function getHasRTT()
     {
         return $this->hasRTT;
-    }
-
-    /**
-     * Set utilisateur
-     *
-     * @param \II\Bundle\SecurityBundle\Entity\User $utilisateur
-     *
-     * @return CongeUtilisateur
-     */
-    public function setUtilisateur(\II\Bundle\SecurityBundle\Entity\User $utilisateur = null)
-    {
-        $this->utilisateur = $utilisateur;
-
-        return $this;
-    }
-
-    /**
-     * Get utilisateur
-     *
-     * @return \II\Bundle\SecurityBundle\Entity\User
-     */
-    public function getUtilisateur()
-    {
-        return $this->utilisateur;
     }
 }
