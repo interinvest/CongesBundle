@@ -28,6 +28,13 @@ class CongeSociete
      */
     private $nom;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nb_jours_rtt", type="decimal", precision=13, scale=3, nullable=false)
+     */
+    private $nbJoursRtt;
+
     public function __construct()
     {
     }
@@ -64,5 +71,29 @@ class CongeSociete
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set nbJoursRtt
+     *
+     * @param integer $nbJoursRtt
+     *
+     * @return CongeSociete
+     */
+    public function setNbJoursRtt($nbJoursRtt)
+    {
+        $this->nbJoursRtt = $nbJoursRtt;
+
+        return $this;
+    }
+
+    /**
+     * Get nbJoursRtt
+     *
+     * @return integer
+     */
+    public function getNbJoursRtt()
+    {
+        return $this->nbJoursRtt;
     }
 }

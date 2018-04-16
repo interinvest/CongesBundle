@@ -22,11 +22,18 @@ class CongeUtilisateur
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=500, nullable=true, options={"default":""})
+     */
+    private $nom;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="has_rtt", type="integer", nullable=true)
      */
-    private $hasRTT;
+    private $hasRtt;
 
     public function __construct()
     {
@@ -43,26 +50,50 @@ class CongeUtilisateur
     }
 
     /**
-     * Set hasRTT
+     * Set nom
      *
-     * @param integer $hasRTT
+     * @param string $nom
      *
      * @return CongeUtilisateur
      */
-    public function setHasRTT($hasRTT)
+    public function setNom($nom)
     {
-        $this->hasRTT = $hasRTT;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Get hasRTT
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set hasRtt
+     *
+     * @param integer $hasRtt
+     *
+     * @return CongeUtilisateur
+     */
+    public function setHasRtt($hasRtt)
+    {
+        $this->hasRtt = $hasRtt;
+
+        return $this;
+    }
+
+    /**
+     * Get hasRtt
      *
      * @return integer
      */
-    public function getHasRTT()
+    public function getHasRtt()
     {
-        return $this->hasRTT;
+        return $this->hasRtt;
     }
 }
