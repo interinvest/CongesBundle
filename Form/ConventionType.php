@@ -10,10 +10,10 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Range;
 
 /**
- * Class CongeConventionType
+ * Class ConventionType
  * @package InterInvest\CongesBundle\Form
  */
-class CongeConventionType extends AbstractType
+class ConventionType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -123,7 +123,7 @@ class CongeConventionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-                'data_class' => 'InterInvest\CongesBundle\Entity\CongeConvention',
+                'data_class' => 'InterInvest\CongesBundle\Entity\Convention',
             )
         );
     }
@@ -133,6 +133,6 @@ class CongeConventionType extends AbstractType
      */
     public function getName()
     {
-        return 'ii_bundle_congebundle_congeConvention';
+        return 'ii_bundle_congebundle_convention';
     }
 }

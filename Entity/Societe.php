@@ -5,12 +5,12 @@ namespace InterInvest\CongesBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CongeSociete
+ * Societe
  *
  * @ORM\Table(name="conge_societe")
- * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\CongeSocieteRepository")
+ * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\SocieteRepository")
  */
-class CongeSociete
+class Societe
 {
     /**
      * @var integer
@@ -54,7 +54,7 @@ class CongeSociete
      *
      * @param string $nom
      *
-     * @return CongeSociete
+     * @return Societe
      */
     public function setNom($nom)
     {
@@ -78,7 +78,7 @@ class CongeSociete
      *
      * @param integer $nbJoursRtt
      *
-     * @return CongeSociete
+     * @return Societe
      */
     public function setNbJoursRtt($nbJoursRtt)
     {

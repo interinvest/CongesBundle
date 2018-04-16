@@ -5,9 +5,9 @@ namespace InterInvest\CongesBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * Class CongeConventionRepository
+ * Class SocieteRepository
  * @package InterInvest\CongesBundle\Repository
  */
-class CongeConventionRepository extends EntityRepository
+class SocieteRepository extends EntityRepository
 {
 }

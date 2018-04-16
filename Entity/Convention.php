@@ -5,12 +5,12 @@ namespace InterInvest\CongesBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CongeConvention
+ * Convention
  *
  * @ORM\Table(name="conge_convention")
- * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\CongeConventionRepository")
+ * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\ConventionRepository")
  */
-class CongeConvention
+class Convention
 {
     /**
      * @var integer
@@ -83,7 +83,7 @@ class CongeConvention
      *
      * @param string $nom
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNom($nom)
     {
@@ -107,7 +107,7 @@ class CongeConvention
      *
      * @param string $nbJoursConge
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNbJoursConge($nbJoursConge)
     {
@@ -131,7 +131,7 @@ class CongeConvention
      *
      * @param string $nbJoursCongeSupplementaireParAnciennete
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNbJoursCongeSupplementaireParAnciennete($nbJoursCongeSupplementaireParAnciennete)
     {
@@ -155,7 +155,7 @@ class CongeConvention
      *
      * @param integer $nbJoursCongeParental
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNbJoursCongeParental($nbJoursCongeParental)
     {
@@ -179,7 +179,7 @@ class CongeConvention
      *
      * @param integer $nbJoursDeces
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNbJoursDeces($nbJoursDeces)
     {
@@ -203,7 +203,7 @@ class CongeConvention
      *
      * @param integer $nbJoursTravailles
      *
-     * @return CongeConvention
+     * @return Convention
      */
     public function setNbJoursTravailles($nbJoursTravailles)
     {

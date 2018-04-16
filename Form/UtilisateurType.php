@@ -3,17 +3,17 @@
 namespace InterInvest\CongesBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Range;
 
 /**
- * Class CongeSocieteType
+ * Class UtilisateurType
  * @package InterInvest\CongesBundle\Form
  */
-class CongeSocieteType extends AbstractType
+class UtilisateurType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -30,20 +30,18 @@ class CongeSocieteType extends AbstractType
                     ),
                 )
             )
-            ->add('nbJoursRtt', TextType::class, array(
-                    'required'    => true,
-                    'label'       => 'Nombre de jours de RTT',
-                    'constraints' => array(
-                        new Range(array(
-                                'min'            => 0, 'minMessage' => 'Le nombre de rtt de congés doit être >= {{ limit }}.',
-                                'max'            => 100, 'maxMessage' => 'Le nombre de jours de rtt doit être <= {{ limit }}.',
-                                'invalidMessage' => 'Merci de saisir un chiffre',
-                            )
-                        ),
-                        new NotBlank(array('message' => 'Vous devez renseigner le nombre de jours de rtt')),
-                    ),
-                )
-            )
+            ->add('hasRtt', ChoiceType::class, array(
+                'required'    => false,
+                'label'       => "RTT",
+                'choices'  => array(
+                    '' => 'Sélectionner',
+                    1 => 'Oui',
+                    0 => 'Non',
+                ),
+                'choice_attr' => function($val, $key, $index) {
+                    return ['class' => 'selectpicker'];
+                },
+            ))
         ;
     }
 
@@ -53,7 +51,7 @@ class CongeSocieteType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-                'data_class' => 'InterInvest\CongesBundle\Entity\CongeSociete',
+                'data_class' => 'InterInvest\CongesBundle\Entity\Utilisateur',
             )
         );
     }
@@ -63,6 +61,6 @@ class CongeSocieteType extends AbstractType
      */
     public function getName()
     {
-        return 'ii_bundle_congebundle_congeSociete';
+        return 'ii_bundle_congebundle_utilisateur';
     }
 }
