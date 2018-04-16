@@ -5,22 +5,11 @@ namespace InterInvest\CongesBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Societe
- *
- * @ORM\Table(name="conge_societe")
- * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\SocieteRepository")
+ * Class Societe
+ * @package InterInvest\CongesBundle\Entity
  */
 class Societe
 {
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
     /**
      * @var string
      *
@@ -37,16 +26,6 @@ class Societe
 
     public function __construct()
     {
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 
     /**

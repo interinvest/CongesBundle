@@ -5,22 +5,11 @@ namespace InterInvest\CongesBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Utilisateur
- *
- * @ORM\Table(name="conge_utilisateur")
- * @ORM\Entity(repositoryClass="InterInvest\CongesBundle\Repository\UtilisateurRepository")
+ * Class Utilisateur
+ * @package InterInvest\CongesBundle\Entity
  */
 class Utilisateur
 {
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
     /**
      * @var string
      *
@@ -37,16 +26,6 @@ class Utilisateur
 
     public function __construct()
     {
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 
     /**
