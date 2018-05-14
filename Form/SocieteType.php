@@ -30,20 +30,6 @@ class SocieteType extends AbstractType
                     ),
                 )
             )
-            ->add('nbJoursRtt', TextType::class, array(
-                    'required'    => true,
-                    'label'       => 'Nombre de jours de RTT',
-                    'constraints' => array(
-                        new Range(array(
-                                'min'            => 0, 'minMessage' => 'Le nombre de rtt de congés doit être >= {{ limit }}.',
-                                'max'            => 100, 'maxMessage' => 'Le nombre de jours de rtt doit être <= {{ limit }}.',
-                                'invalidMessage' => 'Merci de saisir un chiffre',
-                            )
-                        ),
-                        new NotBlank(array('message' => 'Vous devez renseigner le nombre de jours de rtt')),
-                    ),
-                )
-            )
         ;
     }
 

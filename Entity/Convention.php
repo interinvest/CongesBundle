@@ -38,6 +38,13 @@ class Convention
     /**
      * @var string
      *
+     * @ORM\Column(name="nb_annee", type="integer", options={"default":0})
+     */
+    private $nbAnnee;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="nb_jours_conge_supplementaire_par_anciennete", type="decimal", precision=13, scale=3, nullable=false)
      */
     private $nbJoursCongeSupplementaireParAnciennete;
@@ -220,5 +227,29 @@ class Convention
     public function getNbJoursTravailles()
     {
         return $this->nbJoursTravailles;
+    }
+
+    /**
+     * Set nbAnnee
+     *
+     * @param integer $nbAnnee
+     *
+     * @return Convention
+     */
+    public function setNbAnnee($nbAnnee)
+    {
+        $this->nbAnnee = $nbAnnee;
+
+        return $this;
+    }
+
+    /**
+     * Get nbAnnee
+     *
+     * @return integer
+     */
+    public function getNbAnnee()
+    {
+        return $this->nbAnnee;
     }
 }

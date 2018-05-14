@@ -44,6 +44,20 @@ class ConventionType extends AbstractType
                     ),
                 )
             )
+            ->add('nbAnnee', TextType::class, array(
+                    'required'    => true,
+                    'label'       => 'Nombre année ancienneté pour bénéficier avantage',
+                    'constraints' => array(
+                        new Range(array(
+                                'min'            => 0, 'minMessage' => 'Le nombre doit être >= {{ limit }}.',
+                                'max'            => 100, 'maxMessage' => 'Le nombre doit être <= {{ limit }}.',
+                                'invalidMessage' => 'Merci de saisir un chiffre',
+                            )
+                        ),
+                        new NotBlank(array('message' => 'Vous devez renseigner le nombre année ancienneté pour bénéficier avantage')),
+                    ),
+                )
+            )
             ->add('nbJoursCongeSupplementaireParAnciennete', TextType::class, array(
                     'required'    => true,
                     'label'       => 'Nombre de jours de congé supplémentaire par ancienneté',
@@ -102,11 +116,11 @@ class ConventionType extends AbstractType
             )
             ->add('nbJoursTravailles', TextType::class, array(
                     'required'    => true,
-                    'label'       => 'Nombre de jours pour décès',
+                    'label'       => 'Nombre de jours travaillés',
                     'constraints' => array(
                         new Range(array(
                                 'min'            => 0, 'minMessage' => 'Le nombre de jours de congés doit être >= {{ limit }}.',
-                                'max'            => 100, 'maxMessage' => 'Le nombre de jours de congés doit être <= {{ limit }}.',
+                                'max'            => 365, 'maxMessage' => 'Le nombre de jours de congés doit être <= {{ limit }}.',
                                 'invalidMessage' => 'Merci de saisir un chiffre',
                             )
                         ),

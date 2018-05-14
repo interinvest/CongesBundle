@@ -5,7 +5,7 @@ namespace InterInvest\CongesBundle\Entity;
 interface Salarie
 {
     public function getDateEntree();
-    public function setDateEntree(\DateTime $dateEntree);
+    public function setDateEntree($dateEntree);
     public function getCongeSociete();
-    public function setCongeSociete(CongeSociete $congeSociete);
+    public function setCongeSociete($congeSociete);
 }

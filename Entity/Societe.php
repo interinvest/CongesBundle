@@ -13,20 +13,9 @@ class Societe
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=500, nullable=true, options={"default":""})
+     * @ORM\Column(name="nom", type="string", length=500, nullable=true)
      */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nb_jours_rtt", type="decimal", precision=13, scale=3, nullable=false)
-     */
-    private $nbJoursRtt;
-
-    public function __construct()
-    {
-    }
+    protected $nom;
 
     /**
      * Set nom
@@ -50,29 +39,5 @@ class Societe
     public function getNom()
     {
         return $this->nom;
-    }
-
-    /**
-     * Set nbJoursRtt
-     *
-     * @param integer $nbJoursRtt
-     *
-     * @return Societe
-     */
-    public function setNbJoursRtt($nbJoursRtt)
-    {
-        $this->nbJoursRtt = $nbJoursRtt;
-
-        return $this;
-    }
-
-    /**
-     * Get nbJoursRtt
-     *
-     * @return integer
-     */
-    public function getNbJoursRtt()
-    {
-        return $this->nbJoursRtt;
     }
 }
