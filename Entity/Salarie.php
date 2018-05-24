@@ -2,10 +2,29 @@
 
 namespace InterInvest\CongesBundle\Entity;
 
-interface Salarie
+/**
+ * Class Salarie
+ * @package InterInvest\CongesBundle\Entity
+ */
+abstract class Salarie
 {
-    public function getDateEntree();
-    public function setDateEntree($dateEntree);
-    public function getCongeSociete();
-    public function setCongeSociete($congeSociete);
+    /**
+     * @return boolean
+     */
+    abstract public function hasRtt();
+
+    /**
+     * @return float
+     */
+    abstract public function getAnciennete();
+
+    /**
+     * @return Convention
+     */
+    abstract public function getConvention();
+
+    /**
+     * @return [Salarie]
+     */
+    abstract public function getValidateurs();
 }
